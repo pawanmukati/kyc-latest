@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KYC Application form</title>
+
+    <style>
+      #cf-context {
+        width: 100%;
+        height: 100vh;
+      }
+      .hidden-form {
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="form" cf-form class="hidden-form">
+      <input
+        cf-questions="Please choose your desired language for the application:"
+        cf-label="English"
+        type="radio"
+        value="0"
+        name="language"
+      />
+      <input type="radio" name="language" value="Spanish" cf-label="Spanish" />
+      <div id="language-buttons"></div>
+      Start
+      <input type="text" name="FNAME" cf-questions="What is your firstname?" />
+      <input type="text" name="LNAME" cf-questions="What is your lastname?" />
+      <input type="email" name="EMAIL" cf-questions="What is your email?" />
+      <input type="submit" value="Submit" />
+    </form>
+    <div id="cf-context" role="cf-context" cf-context></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/space10-community/conversational-form@latest/dist/conversational-form.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="./script.js"></script>
+
+  </body>
+</html>
